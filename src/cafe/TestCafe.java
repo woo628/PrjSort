@@ -1,7 +1,9 @@
 package cafe;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 /*
@@ -189,8 +191,13 @@ class CafeOrder implements Ipo {
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + menucode);
 			}
-			vo.setMenuName(menuName);
+		//	Map<Character, String> map = new HashMap<>();
+		//	map.put('A',"아메리카노");
+		//	map.put('L',"라떼");
+		//	map.put('T',"차");
+		//	map.put('D',"디저트");
 			
+			vo.setMenuName(menuName);
 			//포장상태 = Y:포장, N:매장
 			if (vo.getPacked() == 'Y') {
 				vo.setPackedName("포장"); 	
